@@ -1,0 +1,386 @@
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+	margin:0px;
+	display:grid;
+	grid-template-rows:1fr 5fr 1fr;
+}
+
+.main-link{
+	text-decoration:none;
+}
+
+.navigator{
+	top:5px;
+	position: relative;
+	right:1%;
+	height: 28px;
+	text-align:right;
+}
+
+.navigator .navigator-text{
+	font-size:8px;
+	color:grey;
+	margin-left:10px;
+	text-decoration: none;
+}
+
+.header .header-text-top{
+	font-size:37px;
+	position:relative;
+	text-align:center;
+	margin-top:10px;
+	color:white;
+	font-weight: bold;
+	margin-bottom:5px;
+}
+
+.header .header-text-bottom{
+	font-size:12px;
+	position:relative;
+	text-align:center;
+	margin-bottom:0px;
+	margin-top:0px;
+	color:white;
+}
+
+.header{
+	background-image:url("NMHeader_Pict_blurver.jpg");
+	background-size: 2000px;
+	/* 배경화면 고정. 스크롤 시 헤더 배경이 가만히 있는 효과. */
+	background-attachment: fixed;
+	margin:0px;
+	border:0px;
+	padding:10px;
+	padding-bottom:20px;
+	margin-top:10px;
+	border-bottom:1px solid rgb(210, 210, 210);
+	border-top: 1px solid  rgb(210, 210, 210);
+}
+
+.mid-content{
+	padding-top:70px;
+	display:grid;
+	height:500px;
+	grid-template-columns:1fr 7fr 1fr;
+	
+}
+
+.mid-content .main{
+	background-color: rgb(5, 171, 221);
+	/* 유용해보이는 그래디언트 코드 저장. */
+	/* background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
+	color:white;
+	height:200px;
+	width: 50%;
+	/* width 값을 주고 margin을 auto로 설정. 좌우 정렬. */
+	margin: 0 auto;
+	/* 이름 러닝타임 딜레이 진행함수 반복횟수 */
+	animation: bigger-content 2s 1s ease 1;
+	/* 애니메이션 러닝 이후 화면. 커진 박스 그대로를 유지하게 해주는 효과. */
+	animation-fill-mode:forwards;
+	position:relative;
+	/* 박스 크기를 넘어가는 안쪽 요소를 안보이게 처리. */
+	overflow:hidden;
+}
+
+.mid-content .main h2{
+	position:relative;
+	font-size: 120px;
+	margin-left:50px;
+	margin-bottom:50px;
+}
+
+.mid-content .main p{
+	position:relative;
+	/* 본문이 박스의 크기를 넘어가도 자동 줄바꿈되어 표시되지 않는 효과. */
+	white-space:nowrap;
+	font-size:20px;
+	margin-left:60px;
+	/* 줄 간격. */
+	line-height:35px;
+}
+
+.mid-content .main .sign-in{
+	margin-left:60px;
+	text-decoration: none;
+	background: rgb(5, 171, 221);
+	padding:10px;
+	/* 수직 이동하는 간단한 방법. 부모요소의 포지션 relative는 상관없음.*/
+	vertical-align: -50px;
+	border-radius: 5px;
+	border: 1px solid white;
+	font-size: 20px;
+	font-family:arial;
+	transition-property:"background";
+	transition-duration: 0.1s;
+}
+.mid-content .main .sign-in:hover{
+	background: rgba(5, 121, 156, 0.452);
+}
+
+.bottom-content{
+	border-top:1px solid rgb(210, 210, 210);
+	background-color: rgb(245, 245, 245);
+	color: rgb(150, 150, 150);
+	position:relative;
+	text-align: center;
+	/* 바깥을 table, 안쪽을 table-cell 설정 후 vertical-align을 middile 로 맞춰 수직 정렬을 중앙으로 맞춤. */
+	display:table;
+	height:100%;
+	vertical-align: middle;
+}
+
+
+.bottom-content .footer-text{
+	font-size:12px;
+	display:table-cell;
+	vertical-align: middle;
+}
+
+
+.content-register{
+	margin-top:10px;
+	/* 퀴즈 그래디언트 바꿔보기. 아래는 샘플 그래디언트 코드. */
+	background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	height: 1000px;
+	position: relative;
+	text-align: center;
+	/* 퍼플(1) */
+	/* background-image: linear-gradient(141deg, #bb91c0 0%, #be7cb6 51%, #da86a6 75%); */
+	/* 핑크퍼플(2) */
+	/* background-image: linear-gradient(141deg, #af8ad8 0%, #c46bbc 51%, #d378b5 75%); */
+	/* 블루퍼플(3) */
+	/* background-image: linear-gradient(141deg, #a4a6bd 0%, #836ecf 51%, #b362d8 75%); */
+	/* 블루(4) */
+	/* background-image: linear-gradient(141deg, #9fb4b8 0%, #5a9cc7 51%, #5c84da 75%); */
+	/* 블루그린(5) */
+	/* background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
+	/* 라이트블루그린(6) */
+	/* background-image: linear-gradient(141deg, #c3e7d3 0%, #1fdbc2 51%, #2ce8e8 75%); */
+	/* 그린(7) */
+	/* background-image: linear-gradient(141deg, #78c0a4 0%, #5dce7f 51%,#49b874 75%); */
+	/* 옐로그린(8) */
+	/* background-image: linear-gradient(141deg, #9db48d 0%, #8fb66a 51%,#97c956 75%); */
+	/* 오렌지(9) */
+	/* background-image: linear-gradient(141deg, #e49178 0%, #dfb17e 51%, #dd9e6b 75%); */
+	/* 레드(10) */
+	/* background-image: linear-gradient(141deg, #e4a6a6 0%, #e67764 51%, #eb6250 75%); */
+}
+
+
+.content-register .quiz-container .slide{
+	position: absolute;
+	left: 50%;
+	top: 42%;
+	transform: translate(-50%, 0);
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.5s;
+	text-align: center;
+}
+.content-register .quiz-container .slide .question{
+	font-size:45px;
+	color: white;
+}
+
+.content-register .quiz-container .active-slide{
+	opacity: 1;
+	z-index: 2;
+}
+.content-register .quiz-container {
+	position: relative;
+	height: 50%;
+	margin-top: 40px;
+}
+
+.content-register .quiz-container .slide .answers{
+	margin-top: 10%;
+	position: relative;
+}
+
+.content-register .quiz-container .slide .answers label{
+	/* label의 width를 조정하기 위해 inline-block 설정. 많은 이해 필요. */
+	display: inline-block;
+	color:rgb(255, 255, 255);
+	font-size:35px;
+	border: 1px solid ivory;
+	width: 20%;
+	height: 100px;
+	line-height: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.content-register .quiz-container .slide .answers label:hover{
+	color:grey;
+	border: 1px solid grey;
+}
+
+.content-register .quiz-container .slide .answers input[type="radio"]{
+	display: none;
+}
+/* 겨우 구현한 코드. +의 사용법과 input label의 분리 필요성 label for 속성과 input id 값을 맞추는 이유 등 이해 필요 */
+.content-register .quiz-container .slide .answers input[type="radio"]:checked + label{
+	color:grey;
+	border: 1px solid grey;
+}
+
+.ans{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.next{
+	display: none;
+	position: absolute;
+	bottom: 10%;
+	transform: translate(-50%, 0);
+	background:transparent;
+	color:white;
+	border: 1px solid white;
+	width: 8%;
+	height: 6%;
+	font-size: 24px;
+}
+/* 마우스를 가져다대었을때 */
+.next:hover{
+	color:grey;
+	border: 1px solid grey;
+}
+/* 현재 focus 되었을때 푸른 border 제거 */
+.next:focus{
+	outline:0;
+}
+
+.submit{
+	display:none;
+	position: absolute;
+	bottom: 10%;
+	transform: translate(-50%, 0);
+	background:transparent;
+	color:white;
+	border: 1px solid white;
+	width: 8%;
+	height: 6%;
+	font-size: 24px;
+}
+/* 마우스를 가져다대었을때 */
+.submit:hover{
+	color:grey;
+	border: 1px solid grey;
+}
+/* focus 되었을때 푸른 border 제거 */
+/* focus 되었을때 복사 불가능하게 하기 */
+.submit:focus{
+	outline:0;
+}
+
+.results{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, 0);
+	font-size: 50px;
+	color: white;
+	opacity: 0;
+	transition: opacity 1s;
+	z-index:-1;
+	width: 90%;
+}
+.results-active{
+	opacity: 1;
+	z-index:3;
+}
+
+.score-counter{
+	font-size: 60px;
+}
+
+.intro-slide{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 60px;
+	color:white;
+	opacity: 0;
+	width: 80%;
+	transition: opacity 1s;
+	text-align:center;
+}
+
+.quiz-start{
+	opacity: 0;
+	display: inline-block;
+	position: absolute;
+	bottom: 35%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background:transparent;
+	color:white;
+	border: 1px solid white;
+	width: 15%;
+	height: 10%;
+	font-size: 32px;
+	transition: opacity 1s;
+}
+
+.quiz-start:focus{
+	outline: none;
+}
+
+.quiz-start:hover{
+	color:grey;
+	border: 1px solid grey;
+}
+
+.fade-out{
+	opacity: 1;
+	z-index: 3;
+	transition: opacity 2s;
+}
+
+.comments{
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, 0);
+	font-size: 30px;
+	color: white;
+	opacity: 0;
+	transition: opacity 1s;
+	z-index:-2;
+	width: 90%;
+}
+.active-comments{
+	opacity: 1;
+	z-index:3;
+}
+
+@keyframes bigger-content{
+	from{}
+	to{ height:600px; width: 100%;}
+	}
+	
+	/* 
+	@keyframes bgChange{
+		0% {background-image: linear-gradient(141deg, #bb91c0 0%, #be7cb6 51%, #da86a6 75%);}
+		10%{background-image: linear-gradient(141deg, #af8ad8 0%, #c46bbc 51%, #d378b5 75%);}
+		20%{background-image: linear-gradient(141deg, #a4a6bd 0%, #836ecf 51%, #b362d8 75%);}
+		30%{background-image: linear-gradient(141deg, #9fb4b8 0%, #5a9cc7 51%, #5c84da 75%);}
+		40%{background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);}
+		50%{background-image: linear-gradient(141deg, #c3e7d3 0%, #1fdbc2 51%, #2ce8e8 75%);}
+		60%{background-image: linear-gradient(141deg, #78c0a4 0%, #5dce7f 51%,#49b874 75%);}
+		70%{background-image: linear-gradient(141deg, #9db48d 0%, #8fb66a 51%,#97c956 75%);}
+		80%{background-image: linear-gradient(141deg, #e49178 0%, #dfb17e 51%, #dd9e6b 75%);}
+		90%{background-image: linear-gradient(141deg, #e4a6a6 0%, #e67764 51%, #eb6250 75%);}
+		100%{background-image: linear-gradient(141deg, #e4a6a6 0%, #e67764 51%, #eb6250 75%);}
+	} */

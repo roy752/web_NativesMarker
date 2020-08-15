@@ -397,7 +397,7 @@
 				return dIndex;
 			}
 			var indexNumber=0;
-			while(myQuestions.length>15)
+			while(myQuestions.length>9)
 				indexNumber=randomDelete(myQuestions, indexNumber);
 			function buildQuiz(){
 				//quiz 클래스를 가진 HTML div 태그에 넣을 코드 스트링을 저장하는 배열.

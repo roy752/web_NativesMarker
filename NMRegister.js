@@ -281,7 +281,7 @@
 					correctAnswer: "a"
 				},
 				{
-					question:"강릉 시내 중심에 있는 버스정류장 이름으로도 쓰인 이 극장의 이름은?",
+					question:"강릉 시내의 중심에 있는,<br> 버스정류장의 이름으로도 쓰인 이 극장의 이름은?",
 					answers:{
 						a: "중앙극장",
 						b: "신영극장",
@@ -397,6 +397,7 @@
 				return dIndex;
 			}
 			var indexNumber=0;
+			// 9개의 문항이 남을 때까지 랜덤한 문항 제거
 			while(myQuestions.length>9)
 				indexNumber=randomDelete(myQuestions, indexNumber);
 			function buildQuiz(){

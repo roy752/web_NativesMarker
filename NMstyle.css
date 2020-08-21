@@ -117,7 +117,7 @@ body{
 	transition-property:"background";
 	transition-duration: 0.1s;
 }
-.mid-content .main .sign-in:hover{
+.mid-content .main .sign-up:hover{
 	background: rgba(5, 121, 156, 0.452);
 }
 

@@ -103,7 +103,7 @@ body{
 	line-height:35px;
 }
 
-.mid-content .main .sign-up{
+.mid-content .main .sign-in{
 	margin-left:60px;
 	text-decoration: none;
 	background: rgb(5, 171, 221);
@@ -117,7 +117,7 @@ body{
 	transition-property:"background";
 	transition-duration: 0.1s;
 }
-.mid-content .main .sign-up:hover{
+.mid-content .main .sign-in:hover{
 	background: rgba(5, 121, 156, 0.452);
 }
 
